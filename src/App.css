@@ -1,0 +1,39 @@
+header {
+	padding: 60px;
+	text-align: center;
+	background: darkslategrey;
+	color: white;
+	font-size: 30px;
+}
+
+h2 {
+	padding: 30px;
+	background-color: darkslategrey;
+	text-align: left;
+	color: white;
+	margin-top: 5px;
+}
+
+main p{
+	margin: 5;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: darkslategrey;
+	color: white;	
+	padding-left: 8%;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	left:0;
+	right: 0;
+	width: 100%;
+	background-color: darkslategrey;
+	color: white;
+	text-align: center;
+}
+
+body, html {
+	height: 100%
+}
