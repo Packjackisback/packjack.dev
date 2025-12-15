@@ -1,15 +1,16 @@
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Uptime from "./pages/Uptime";
 
-import ScrambleText from "./templates/ScrambleText";
-import CurrentTime from "./templates/CurrentTime";
-import ViewerCounter from "./templates/ViewerCounter";
+import "./css/main.css";
 import PageViewCounter from "./templates/PageViewCounter";
-import NowPlaying from "./templates/NowPlaying";
-import CodingTime from "./templates/CodingTime";
+import BracketNav from "./templates/BracketNav";
+import ViewerCounter from "./templates/ViewerCounter";
 
 function App() {
   return (
-    <div className="page">
+    <BrowserRouter>
 			<div className="topper">
 				<h3 style={{textAlign: "center"}}>packjack.dev</h3>
 			</div>
@@ -17,29 +18,19 @@ function App() {
 			<div style={{ position: 'fixed', top: 10, right: 10 }}>
   			<ViewerCounter style={{ fontSize: '14px' }} />
 			</div>
-
-			<header className="name-wrapper">
-				<h1>
-					<ScrambleText/>
-				</h1>
-				<p>Systems management and software dev</p>
-			</header>
-    
-			<main>
-				<p>
-					The current time for me is	<CurrentTime/>, and I am currently listening to <NowPlaying/>.
-					<br/>
-					<br/>
-					Today, I have coded for <CodingTime/> seconds! 
-				</p>
-			</main>
-
+      <Routes>
+        <Route path="/" element={<Home />}/>
+				<Route path="/about" element={<About/>}/>
+				<Route path="/uptime" element={<Uptime/>}/>
+      </Routes>
 			<footer>
-				<p>No copyright, do what you want! (This page has <PageViewCounter/>)</p>
-			</footer>
-
-    </div>
-  )
+			<BracketNav/>
+			<p>No copyright, do what you want! (This page has <PageViewCounter/>)</p>
+		</footer>
+    </BrowserRouter>
+		
+  );
 }
 
-export default App
+export default App;
+

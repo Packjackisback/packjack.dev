@@ -1,0 +1,41 @@
+.bracket-nav {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-family: monospace;
+}
+
+.bracket-link {
+  margin: 0 0.6rem;
+  text-decoration: none;
+  color: inherit;
+  opacity: 0.6;
+  display: inline-flex;
+  align-items: center;
+}
+
+.bracket-link:hover {
+  opacity: 1;
+}
+
+.bracket {
+  display: inline-block;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.bracket-link:hover .left {
+  transform: translateX(-3px);
+}
+
+.bracket-link:hover .right {
+  transform: translateX(3px);
+}
+
+.bracket-link.active {
+  opacity: 1;
+  pointer-events: none;
+}
+
+.bracket-link.active .bracket {
+  transform: none;
+}
+
