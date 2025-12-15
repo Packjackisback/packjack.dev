@@ -21,7 +21,7 @@ export default function UptimeList() {
         const response = await axios.get('http://localhost:3001/api/uptime/uptime-status');
         setMonitors(response.data.monitors || []);
         setLoading(false);
-      } catch (err: any) {
+      } catch (err) {
         console.error(err);
         setError('Failed to fetch uptime data');
         setLoading(false);
@@ -29,7 +29,7 @@ export default function UptimeList() {
     };
 
     fetchMonitors();
-    const interval = setInterval(fetchMonitors, 10000);
+    const interval = setInterval(fetchMonitors, 10000); // refresh every 10s
     return () => clearInterval(interval);
   }, []);
 
@@ -37,13 +37,12 @@ export default function UptimeList() {
   if (error) return <p>{error}</p>;
 
   return (
-    <div style={{ whiteSpace: 'pre-line', fontFamily: 'monospace' }}>
+    <ul style={{ fontFamily: 'monospace', paddingLeft: 20 }}>
       {monitors.map((m) => (
-        <div key={m.id}>
+        <li key={m.id}>
           {m.name} [{m.status === 1 ? 'UP' : 'DOWN'}]
-        </div>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 }
-

@@ -5,7 +5,7 @@ const pages = [
 	{ label: "home", path: "/"},
   { label: "about", path: "/about" },
   { label: "uptime", path: "/uptime" },
-  { label: "stats", path: "/stats" },
+//  { label: "stats", path: "/stats" },
 ];
 
 function BracketNav() {

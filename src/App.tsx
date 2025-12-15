@@ -25,7 +25,7 @@ function App() {
       </Routes>
 			<footer>
 			<BracketNav/>
-			<p>No copyright, do what you want! (This page has <PageViewCounter/>)</p>
+			<p>No copyright, do what you want! (This site has <PageViewCounter/>)</p>
 		</footer>
     </BrowserRouter>
 		
