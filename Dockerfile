@@ -1,19 +1,18 @@
-FROM node:20-alpine AS builder
+
+FROM node:18-alpine
 
 WORKDIR /app
-COPY package*.json ./
+
+COPY package.json .
+
 RUN npm install
+
+RUN npm i -g serve
+
 COPY . .
+
 RUN npm run build
-
-FROM node:20-alpine
-
-WORKDIR /app
-COPY --from=builder /app ./
-
-ENV NODE_ENV=production
 
 EXPOSE 3000
 
-CMD ["npm", "start"]
-
+CMD [ "serve", "-s", "dist" ]
