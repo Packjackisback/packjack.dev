@@ -9,7 +9,7 @@ export default function ScrambleText({
 }) {
   const [text, setText] = useState(endText);
   const [currentTarget, setCurrentTarget] = useState(endText);
-  const intervalRef = useRef(null);
+  const intervalRef = useRef<number | null>(null);
   const hasShuffledRef = useRef(false);
   const chars = "abcdefghijklmnopqrstuvwxyz0123456789!@#$%&*";
   
@@ -25,7 +25,7 @@ export default function ScrambleText({
     return () => clearTimeout(timer);
   }, [shuffleDelay, startText]);
   
-  const shuffleTo = (targetText) => {
+  const shuffleTo = (targetText: string) => {
     if (intervalRef.current) {
       clearInterval(intervalRef.current);
     }
@@ -38,8 +38,9 @@ export default function ScrambleText({
     intervalRef.current = setInterval(() => {
       if (frame >= totalFrames) {
         setText(targetText);
-        clearInterval(intervalRef.current);
-        intervalRef.current = null;
+        intervalRef.current && clearInterval(intervalRef.current);
+				intervalRef.current = null;
+
         return;
       }
       

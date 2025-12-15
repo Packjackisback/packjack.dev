@@ -1,12 +1,18 @@
 import { useState, useEffect } from 'react';
 
+
+interface Language {
+  name: string;
+  percent?: number;
+}
+
 export default function CodingTime({ 
   apiUrl = 'http://localhost:3001',
   className = "", 
   style = {} 
 }) {
-  const [codingTime, setCodingTime] = useState('0 hrs 0 mins');
-  const [languages, setLanguages] = useState([]);
+  const [codingTime, setCodingTime] = useState<string>('0 hrs 0 mins');
+  const [languages, setLanguages] = useState<Language[]>([]);
 
   useEffect(() => {
     const fetchCodingTime = async () => {
@@ -34,3 +40,4 @@ export default function CodingTime({
     </span>
   );
 }
+

@@ -1,4 +1,3 @@
-import React from 'react';
 import UptimeList from '../templates/Monitor';
 
 export default function Uptime() {

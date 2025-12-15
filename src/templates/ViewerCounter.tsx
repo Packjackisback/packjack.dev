@@ -7,7 +7,9 @@ export default function ViewerCounter({
 }) {
   const [viewerCount, setViewerCount] = useState(1);
   const sessionId = useRef(`viewer_${Date.now()}_${Math.random()}`);
-  const heartbeatInterval = useRef(null);
+	const heartbeatInterval = useRef<number | null>(null);
+
+
 
   useEffect(() => {
     const sendHeartbeat = async () => {
@@ -38,7 +40,7 @@ export default function ViewerCounter({
 
     sendHeartbeat();
 
-    heartbeatInterval.current = setInterval(sendHeartbeat, 3000);
+    heartbeatInterval.current = window.setInterval(sendHeartbeat, 3000);
 
     return () => {
       if (heartbeatInterval.current) {

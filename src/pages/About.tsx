@@ -14,10 +14,7 @@ function About() {
 				Hi! I'm Jackson, a {<Age/>} year old student from Texas! <br/> 
 				In my free time I enjoy <RotatingText
 														texts={["swimming", "running", "working out", "playing baseball", "going down wikipedia rabbit holes", "programming", "daydreaming", "talking with my friends", "hanging out with my amazing girlfriend"]}
-														transition={{ type: 'spring', stiffness: 300, damping: 25 }}
 														rotationInterval={2000}
-    												mainClassName="inline-block"
-    												elementLevelClassName="inline-block"
 														/>
 				
 			</div>

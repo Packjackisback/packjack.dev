@@ -1,11 +1,20 @@
+
 import { useState, useEffect } from 'react';
+
+interface Track {
+  name: string;
+  artist: string;
+  album?: string;
+  image?: string;
+  url?: string;
+}
 
 export default function NowPlaying({ 
   apiUrl = 'http://localhost:3001',
   className = "", 
   style = {} 
 }) {
-  const [track, setTrack] = useState(null);
+  const [track, setTrack] = useState<Track | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
@@ -45,3 +54,4 @@ export default function NowPlaying({
     </span>
   );
 }
+

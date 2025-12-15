@@ -2,11 +2,8 @@ import '../css/main.css';
 
 import ScrambleText from "../templates/ScrambleText";
 import CurrentTime from "../templates/CurrentTime";
-import ViewerCounter from "../templates/ViewerCounter";
-import PageViewCounter from "../templates/PageViewCounter";
 import NowPlaying from "../templates/NowPlaying";
 import CodingTime from "../templates/CodingTime";
-import BracketNav from "../templates/BracketNav";
 
 function Home() {
   return (

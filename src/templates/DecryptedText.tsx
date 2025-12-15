@@ -1,6 +1,6 @@
-import { useEffect, useState, useRef, ReactNode } from 'react';
+import { useEffect, useState, useRef} from 'react';
 import { motion} from 'motion/react';
-import {ComponentPropsWithoutRef} from 'react';
+import type {ComponentPropsWithoutRef} from 'react';
 
 //i took this from https://www.reactbits.dev/text-animations/decrypted-text
 //
@@ -59,7 +59,7 @@ export default function DecryptedText({
   const containerRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
-    let interval: NodeJS.Timeout;
+    let interval: number;
     let currentIteration = 0;
 
     const getNextIndex = (revealedSet: Set<number>): number => {
