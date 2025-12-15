@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 export default function PageViewCounter({ 
-  apiUrl = 'http://localhost:3031',
+  apiUrl = 'https://api.packjack.dev',
   page = 'home',
   trackView = true,
   className = "", 

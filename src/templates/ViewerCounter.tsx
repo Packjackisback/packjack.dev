@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 
 export default function ViewerCounter({ 
-  apiUrl = 'http://localhost:3031',
+  apiUrl = 'https://api.packjack.dev',
   className = "", 
   style = {} 
 }) {

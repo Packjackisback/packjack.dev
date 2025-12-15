@@ -7,7 +7,7 @@ interface Language {
 }
 
 export default function CodingTime({ 
-  apiUrl = 'http://localhost:3001',
+  apiUrl = 'https://api.packjack.dev',
   className = "", 
   style = {} 
 }) {

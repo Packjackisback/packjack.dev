@@ -18,7 +18,7 @@ export default function UptimeList() {
     const fetchMonitors = async () => {
       try {
         setLoading(true);
-        const response = await axios.get('http://localhost:3031/api/uptime/uptime-status');
+        const response = await axios.get('https://api.packjack.dev/api/uptime/uptime-status');
         setMonitors(response.data.monitors || []);
         setLoading(false);
       } catch (err) {
