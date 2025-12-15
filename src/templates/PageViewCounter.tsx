@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 export default function PageViewCounter({ 
-  apiUrl = 'http://localhost:3001',
+  apiUrl = 'http://localhost:3031',
   page = 'home',
   trackView = true,
   className = "", 

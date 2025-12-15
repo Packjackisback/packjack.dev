@@ -10,7 +10,7 @@ interface Track {
 }
 
 export default function NowPlaying({ 
-  apiUrl = 'http://localhost:3001',
+  apiUrl = 'http://localhost:3031',
   className = "", 
   style = {} 
 }) {

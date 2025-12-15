@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 
 export default function ViewerCounter({ 
-  apiUrl = 'http://localhost:3001',
+  apiUrl = 'http://localhost:3031',
   className = "", 
   style = {} 
 }) {
