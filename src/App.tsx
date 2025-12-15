@@ -1,24 +1,41 @@
 import './App.css';
 
+import ScrambleText from "./templates/ScrambleText";
+import CurrentTime from "./templates/CurrentTime";
+import ViewerCounter from "./templates/ViewerCounter";
+import PageViewCounter from "./templates/PageViewCounter";
+import NowPlaying from "./templates/NowPlaying";
+import CodingTime from "./templates/CodingTime";
+
 function App() {
   return (
     <div className="page">
-			<header>
-				<h1>Jackson MacGregor</h1>
+			<div className="topper">
+				<h3 style={{textAlign: "center"}}>packjack.dev</h3>
+			</div>
+			
+			<div style={{ position: 'fixed', top: 10, right: 10 }}>
+  			<ViewerCounter style={{ fontSize: '14px' }} />
+			</div>
+
+			<header className="name-wrapper">
+				<h1>
+					<ScrambleText/>
+				</h1>
 				<p>Systems management and software dev</p>
 			</header>
     
 			<main>
-				<h2>Who am I?</h2>
 				<p>
-					I'm Jackson MacGregor! I really enjoy clouds, fire alarms, and programming. 
+					The current time for me is	<CurrentTime/>, and I am currently listening to <NowPlaying/>.
 					<br/>
-					I don't usually have the commitment to finish them, but I love my little 11pm projects.
+					<br/>
+					Today, I have coded for <CodingTime/> seconds! 
 				</p>
 			</main>
 
 			<footer>
-				<p>No copyright, do what you want! (Made by Jackson)</p>
+				<p>No copyright, do what you want! (This page has <PageViewCounter/>)</p>
 			</footer>
 
     </div>

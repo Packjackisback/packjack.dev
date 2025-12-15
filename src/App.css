@@ -1,26 +1,33 @@
+@import url("css/variables.css");
+
 header {
 	padding: 60px;
+	padding-top: 20px;
+	padding-bottom: 100px;
 	text-align: center;
-	background: darkslategrey;
 	color: white;
 	font-size: 30px;
 }
 
+.topper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+}
+
 h2 {
-	padding: 30px;
-	background-color: darkslategrey;
 	text-align: left;
-	color: white;
 	margin-top: 5px;
+	text-align: center;
 }
 
 main p{
 	margin: 5;
-	padding-top: 20px;
 	padding-bottom: 20px;
-	background-color: darkslategrey;
-	color: white;	
 	padding-left: 8%;
+	text-align: center;
 }
 
 footer {
@@ -29,11 +36,11 @@ footer {
 	left:0;
 	right: 0;
 	width: 100%;
-	background-color: darkslategrey;
-	color: white;
 	text-align: center;
 }
 
 body, html {
-	height: 100%
+	height: 100%;
+	background-color: var(--yale-blue);
+	color: white;
 }

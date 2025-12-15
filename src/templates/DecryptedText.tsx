@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef, ReactNode } from 'react';
-import { motion, HTMLMotionProps } from 'motion/react';
+import { motion} from 'motion/react';
+import {ComponentPropsWithoutRef} from 'react';
 
 //i took this from https://www.reactbits.dev/text-animations/decrypted-text
 //
@@ -22,7 +23,7 @@ const styles = {
   }
 };
 
-interface DecryptedTextProps extends HTMLMotionProps<'span'> {
+interface DecryptedTextProps extends ComponentPropsWithoutRef<typeof motion.span> {
   text: string;
   speed?: number;
   maxIterations?: number;
