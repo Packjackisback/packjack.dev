@@ -1,0 +1,14 @@
+@font-face {
+	font-family: superstar;
+	src: url('/fonts/superstar_memesbruh03.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: soda;
+	src: url('/fonts/KiwiSoda.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: blockface;
+	src: url('/fonts/BlockCraft.otf') format('opentype');
+}

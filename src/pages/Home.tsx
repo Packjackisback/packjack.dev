@@ -1,29 +1,29 @@
 import '../css/main.css';
 
-import ScrambleText from "../templates/ScrambleText";
+import { NavLink, Route, Routes } from "react-router-dom";
+
 import CurrentTime from "../templates/CurrentTime";
-import NowPlaying from "../templates/NowPlaying";
-import CodingTime from "../templates/CodingTime";
+import TreeNav from "../templates/TreeNav";
 
 function Home() {
   return (
-    <div className="page">
-				<header className="name-wrapper">
-					<h1>
-						<ScrambleText/>
-					</h1>
-					<p style={{textAlign: "center"}}>Systems management and software dev</p>
-			</header>
-			
-    
-			<main>
-				<p>
-					The current time for me is	<CurrentTime/>, and I am currently listening to <NowPlaying/>.
-					<br/>
-					<br/>
-					Today, I have coded for <CodingTime/> seconds! 
-				</p>
-			</main>
+    <div className="main">
+			<div className="primary-container">
+				<h1>Welcome!</h1>
+
+				<p>I'm jackson, and this is my website!</p>
+
+				<p>If you want to know more about me, you can check <NavLink to="/about">/about</NavLink> :D</p>
+
+				
+
+				<p>Thanks for visitng :D</p>
+
+
+			</div>
+
+				<TreeNav/>
+
     </div>
   )
 }

@@ -1,11 +1,18 @@
 @import url("variables.css");
+@import url("fonts.css");
+
+
+:root {
+	--primary-color: rgba(0, 0, 252, 0.3);
+	font-family: blockface;
+	font-size: 110%;
+}
 
 header {
 	padding: 60px;
 	padding-top: 20px;
 	padding-bottom: 100px;
 	text-align: center;
-	color: white;
 	font-size: 30px;
 }
 
@@ -17,10 +24,14 @@ header {
 	width: 100%;
 }
 
-h2 {
-	text-align: left;
-	margin-top: 5px;
+h2, h1 {
 	text-align: center;
+	font-family: soda;
+}
+
+p pre {
+	font-family: blockface !important;
+	font-size: 25;
 }
 
 main p{
@@ -41,6 +52,66 @@ footer {
 
 body, html {
 	height: 100%;
-	background-color: var(--yale-blue);
-	color: white;
+	margin: 0;
+}
+
+body {
+  background-color: #F2F7FC;
+  background-image:
+    linear-gradient(to right, rgba(0, 0, 252, 0.2) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 252, 0.2) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: scroll 80s linear infinite;
+}
+
+@keyframes scroll{
+  from {
+    background-position: 0 0
+  }
+  to {
+    background-position: 1077px 650px  /* dimensions of bg */
+  }
+}
+
+.primary-container {
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: 3px solid var(--primary-color);
+	width: 50%;
+	height: 60%;
+	border-radius: 10px;
+	background-color: #f0f5fa;
+	padding: 5%;
+	padding-top: 2%;
+}
+
+.secondary-container {
+	margin: 0;
+	position: absolute;
+	top: 60%;
+	left: 80%;
+	transform: translate(-50%, -50%);
+	border: 3px solid var(--primary-color);
+	width: 22%;
+	height: 30%;
+	border-radius: 10px;
+	background-color: #f0f5fa;
+	padding: 5%;
+	padding-top: 2%;
+}
+
+.container > *:not(:last-child) {
+	display: block;
+	margin-bottom: 50px;
+}
+
+h1, h2 {
+	font-family: soda;
+}
+
+p {
+	text-align: center;
 }

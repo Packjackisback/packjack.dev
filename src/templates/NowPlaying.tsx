@@ -10,7 +10,7 @@ interface Track {
 }
 
 export default function NowPlaying({ 
-  apiUrl = 'htts://api.packjack.dev',
+  apiUrl = 'https://api.packjack.dev',
   className = "", 
   style = {} 
 }) {
@@ -18,11 +18,11 @@ export default function NowPlaying({
   const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
-    const fetchNowPlaying = async () => {
+    const fetchWithRetry = async (retries = 5) => {
       try {
         const response = await fetch(`${apiUrl}/api/lastfm/now-playing`);
         const data = await response.json();
-        
+
         if (data.isPlaying && data.track) {
           setTrack(data.track);
           setIsPlaying(true);
@@ -30,12 +30,20 @@ export default function NowPlaying({
           setIsPlaying(false);
         }
       } catch (error) {
-        console.error('Failed to fetch now playing:', error);
+        if (retries > 1) {
+          console.warn(`Fetch failed, retrying (${retries - 1} left)`);
+          await new Promise(res => setTimeout(res, 1000));
+          return fetchWithRetry(retries - 1);
+        }
+
+        console.error('Failed to fetch now playing after retries:', error);
+        setIsPlaying(false);
       }
     };
 
-    fetchNowPlaying();
-    const interval = setInterval(fetchNowPlaying, 15000);
+    fetchWithRetry();
+
+    const interval = setInterval(fetchWithRetry, 15000);
 
     return () => clearInterval(interval);
   }, [apiUrl]);
