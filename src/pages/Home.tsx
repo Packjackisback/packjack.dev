@@ -1,14 +1,13 @@
 import '../css/main.css';
 
-import { NavLink, Route, Routes } from "react-router-dom";
-
-import CurrentTime from "../templates/CurrentTime";
+import { NavLink} from "react-router-dom";
+import PrimaryContainer from "../templates/PrimaryContainer";
 import TreeNav from "../templates/TreeNav";
 
 function Home() {
   return (
     <div className="main">
-			<div className="primary-container">
+			<PrimaryContainer>
 				<h1>Welcome!</h1>
 
 				<p>I'm jackson, and this is my website!</p>
@@ -20,7 +19,7 @@ function Home() {
 				<p>Thanks for visitng :D</p>
 
 
-			</div>
+			</PrimaryContainer>
 
 				<TreeNav/>
 

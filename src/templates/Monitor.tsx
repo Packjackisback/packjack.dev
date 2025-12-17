@@ -37,7 +37,7 @@ export default function UptimeList() {
   if (error) return <p>{error}</p>;
 
   return (
-    <ul style={{ fontFamily: 'monospace', paddingLeft: 20 }}>
+    <ul style={{ fontFamily: 'blockface', paddingLeft: 20 }}>
       {monitors.map((m) => (
         <li key={m.id}>
           {m.name} [{m.status === 1 ? 'UP' : 'DOWN'}]

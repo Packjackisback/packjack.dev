@@ -1,5 +1,7 @@
 import {useState, useRef, useEffect} from 'react';
 
+import "../css/main.css";
+
 function DraggableWindow({ children, initialX, initialY, title }: { children: React.ReactNode, initialX: string, initialY: string, title: string }) {
   const [position, setPosition] = useState({ x: initialX, y: initialY });
   const [isDragging, setIsDragging] = useState(false);
@@ -70,10 +72,10 @@ function DraggableWindow({ children, initialX, initialY, title }: { children: Re
           userSelect: 'none'
         }}
       >
-        <span style={{ color: 'white', fontWeight: 'bold', fontSize: '14px' }}>{title}</span>
+        <span style={{ color: 'white', fontWeight: 'bold', fontSize: '16px', fontFamily: "soda" }}>{title}</span>
         <span style={{color: 'white'}}>x</span>
       </div>
-      <div style={{ padding: '20px' }}>
+      <div style={{ padding: '20px', paddingTop: '5px' }}>
         {children}
       </div>
     </div>

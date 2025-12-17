@@ -23,11 +23,8 @@ function TreeNav() {
   return (
     <DraggableWindow initialX="80%" initialY="60%" title="Navigation">
       <nav className="nav-tree">
-        <pre>
-          {'packjack.dev\n'}
-          {'├── '}<NavLink to="/blank">blank</NavLink>{'\n'}
-          {'├── '}<NavLink to="/images">images</NavLink>{'\n'}
-          {'├── '}<NavLink to="/links">links</NavLink>{'\n'}
+        <pre style={{fontFamily: "blockface"}}>
+          <NavLink to="/">packjack.dev</NavLink>{'\n'}
           {'├── '}<span onClick={() => toggleFolder('me')} style={{ cursor: 'pointer', textDecoration: 'underline' }}>me/</span>{'\n'}
           {expandedFolders.has('me') && (
             <>
@@ -40,23 +37,28 @@ function TreeNav() {
               {'│   └── '}<NavLink to="/me/soapbox">soapbox</NavLink>{'\n'}
             </>
           )}
-          {'├── '}<NavLink to="/sitemap">sitemap</NavLink>{'\n'}
           {'├── '}<span onClick={() => toggleFolder('tech')} style={{ cursor: 'pointer', textDecoration: 'underline' }}>tech/</span>{'\n'}
           {expandedFolders.has('tech') && (
             <>
               {'│   ├── '}<NavLink to="/tech/ai">ai</NavLink>{'\n'}
               {'│   ├── '}<NavLink to="/tech/colophon">colophon</NavLink>{'\n'}
               {'│   ├── '}<NavLink to="/tech/defaults">defaults</NavLink>{'\n'}
+							{'│   ├── '}<NavLink to="/tech/linux">linux</NavLink>{'\n'}
               {'│   └── '}<NavLink to="/tech/status">status</NavLink>{'\n'}
             </>
           )}
-          {'└── '}<span onClick={() => toggleFolder('world')} style={{ cursor: 'pointer', textDecoration: 'underline' }}>world/</span>{'\n'}
+          {'├── '}<span onClick={() => toggleFolder('world')} style={{ cursor: 'pointer', textDecoration: 'underline' }}>world/</span>{'\n'}
           {expandedFolders.has('world') && (
             <>
-              {'    ├── '}<NavLink to="/world/clouds">clouds</NavLink>{'\n'}
-              {'    └── '}<NavLink to="/world/music">music</NavLink>
+              {'│   ├── '}<NavLink to="/world/clouds">clouds</NavLink>{'\n'}
+              {'│   └── '}<NavLink to="/world/music">music</NavLink>{'\n'}
             </>
           )}
+					{'├── '}<NavLink to="/blank">blank</NavLink>{'\n'}
+          {'├── '}<NavLink to="/images">images</NavLink>{'\n'}
+          {'├── '}<NavLink to="/links">links</NavLink>{'\n'}
+					{'└── '}<NavLink to="/sitemap">sitemap</NavLink>
+
         </pre>
       </nav>
     </DraggableWindow>

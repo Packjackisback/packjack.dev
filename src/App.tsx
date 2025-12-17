@@ -1,13 +1,16 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
-import About from "./pages/About";
-import Uptime from "./pages/Uptime";
+import About from "./pages/me/About";
+import Uptime from "./pages/tech/Status";
+import Blank from "./pages/Blank";
+import Carry from "./pages/me/Carry";
+import Linux from "./pages/tech/Linux";
 
 import "./css/main.css";
 import PageViewCounter from "./templates/PageViewCounter";
-import BracketNav from "./templates/BracketNav";
 import ViewerCounter from "./templates/ViewerCounter";
+import TreeNav from "./templates/TreeNav";
 
 function App() {
   return (
@@ -21,14 +24,19 @@ function App() {
 			</div>
       <Routes>
         <Route path="/" element={<Home />}/>
-				<Route path="/about" element={<About/>}/>
-				<Route path="/uptime" element={<Uptime/>}/>
+
+				<Route path="/me/about" element={<About/>}/>
+				<Route path="/me/carry" element={<Carry/>}/>
+
+				<Route path="/tech/status" element={<Uptime/>}/>
+				<Route path="/tech/linux" element={<Linux/>}/>
+				<Route path="/blank" element={<Blank/>}/>
       </Routes>
 			<footer>
 			<p>No copyright, do what you want! (This site has <PageViewCounter/>)</p>
 		</footer>
+		<TreeNav/>
     </BrowserRouter>
-		
   );
 }
 

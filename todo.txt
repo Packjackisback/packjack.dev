@@ -1,0 +1,23 @@
+me/
+	about : put a photo or something
+	carry : daily carryon
+	contact : add email, discord, github, slack
+	ideas : implement the data server
+	now : same thing
+	pfp : add something where I can upload pfps and stuff
+	soapbox : same thing, blog site
+
+tech/
+	ai : views on ai
+	colophon : how was this site made
+	defaults : what software do i use
+	status : implemented, could look nicer
+
+world/
+	clouds : server, upload pictures of clouds
+	music : another blog place
+
+blank : DONE
+images : another blog place
+links : another server thing
+sitemap : pretty much done
