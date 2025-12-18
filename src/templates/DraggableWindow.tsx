@@ -2,7 +2,7 @@ import {useState, useRef, useEffect} from 'react';
 
 import "../css/main.css";
 
-function DraggableWindow({ children, initialX, initialY, title }: { children: React.ReactNode, initialX: string, initialY: string, title: string }) {
+function DraggableWindow({ children, initialX, initialY, title, minWidth }: { children: React.ReactNode, initialX: string, initialY: string, title: string, minWidth?: string }) {
   const [position, setPosition] = useState({ x: initialX, y: initialY });
   const [isDragging, setIsDragging] = useState(false);
   const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 });
@@ -55,7 +55,7 @@ function DraggableWindow({ children, initialX, initialY, title }: { children: Re
         backgroundColor: '#f0f5fa',
         padding: '0',
         width: 'auto',
-        minWidth: '300px'
+				minWidth: minWidth,
       }}
     >
       <div 

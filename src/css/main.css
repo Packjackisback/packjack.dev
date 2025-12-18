@@ -80,12 +80,14 @@ body {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	border: 3px solid var(--primary-color);
-	width: 50%;
-	height: 60%;
+	width: 30%;
+	min-height: 60%;
+	max-height: 60%;
 	border-radius: 10px;
 	background-color: #f0f5fa;
 	padding: 5%;
 	padding-top: 2%;
+	overflow-y: auto;
 }
 
 .secondary-container {

@@ -2,22 +2,22 @@ me/
 	about : put a photo or something
 	carry : daily carryon
 	contact : add email, discord, github, slack
-	ideas : implement the data server
-	now : same thing
-	pfp : add something where I can upload pfps and stuff
-	soapbox : same thing, blog site
+	ideas : done
+	now : need content
+	soapbox : need content
 
 tech/
 	ai : views on ai
 	colophon : how was this site made
 	defaults : what software do i use
 	status : implemented, could look nicer
+	linux : need to add photos of rice
 
 world/
-	clouds : server, upload pictures of clouds
-	music : another blog place
+	clouds : needs content
+	music : needs content, add to routes
 
 blank : DONE
-images : another blog place
-links : another server thing
-sitemap : pretty much done
+images : needs content
+links : links to cool things I like
+sitemap : DONE

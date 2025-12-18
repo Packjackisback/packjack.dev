@@ -2,7 +2,6 @@ import '../css/main.css';
 
 import { NavLink} from "react-router-dom";
 import PrimaryContainer from "../templates/PrimaryContainer";
-import TreeNav from "../templates/TreeNav";
 
 function Home() {
   return (
@@ -20,8 +19,6 @@ function Home() {
 
 
 			</PrimaryContainer>
-
-				<TreeNav/>
 
     </div>
   )

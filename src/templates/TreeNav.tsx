@@ -1,8 +1,6 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
-import DraggableWindow from "../templates/DraggableWindow";
-
 import "../css/main.css";
 
 function TreeNav() {
@@ -21,7 +19,6 @@ function TreeNav() {
   };
 
   return (
-    <DraggableWindow initialX="80%" initialY="60%" title="Navigation">
       <nav className="nav-tree">
         <pre style={{fontFamily: "blockface"}}>
           <NavLink to="/">packjack.dev</NavLink>{'\n'}
@@ -33,7 +30,6 @@ function TreeNav() {
               {'│   ├── '}<NavLink to="/me/contact">contact</NavLink>{'\n'}
               {'│   ├── '}<NavLink to="/me/ideas">ideas</NavLink>{'\n'}
               {'│   ├── '}<NavLink to="/me/now">now</NavLink>{'\n'}
-              {'│   ├── '}<NavLink to="/me/pfp">pfp</NavLink>{'\n'}
               {'│   └── '}<NavLink to="/me/soapbox">soapbox</NavLink>{'\n'}
             </>
           )}
@@ -61,7 +57,6 @@ function TreeNav() {
 
         </pre>
       </nav>
-    </DraggableWindow>
   );
 }
 export default TreeNav;
