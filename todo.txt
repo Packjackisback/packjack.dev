@@ -1,23 +1,14 @@
 me/
 	about : put a photo or something
 	carry : daily carryon
-	about : add email, discord, github, slack
-	ideas : DONE
-	now : DONE
-	soapbox : DONE
 
 tech/
-	ai : views on ai
-	colophon : how was this site made
 	defaults : what software do i use
-	status : implemented, could look nicer
+	status : make look nicer
 	linux : need to add photos of rice
 
-world/
-	clouds : DONE
-	music : DONE
-
-blank : DONE
-images : DONE
 links : links to cool things I like
-sitemap : DONE
+
+add lastfm in draggable window
+
+add hackatime in draggable mode
