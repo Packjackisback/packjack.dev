@@ -11,9 +11,9 @@ function Home() {
 
 				<p>I'm jackson, and this is my website!</p>
 
-				<p>If you want to know more about me, you can check <NavLink to="/about">/about</NavLink> :D</p>
-
+				<p>If you want to know more about me, you can check <NavLink to="/me/about">/about</NavLink></p>
 				
+				<p>My photos and incoherent ramblings can be found in the navtree below and to the right</p>
 
 				<p>Thanks for visitng :D</p>
 

@@ -4,13 +4,18 @@ import Home from "./pages/Home";
 import Blank from "./pages/Blank";
 import Sitemap from "./pages/Sitemap";
 import Images from "./pages/Images";
+import Links from "./pages/Links";
 
 import Carry from "./pages/me/Carry";
 import About from "./pages/me/About";
+import Contact from "./pages/me/Contact";
 import Ideas from "./pages/me/Ideas";
 import Now from "./pages/me/Now";
 import Soapbox from "./pages/me/Soapbox";
 
+import Ai from "./pages/tech/Ai";
+import Colophon from "./pages/tech/Colophon";
+import Defaults from "./pages/tech/Defaults";
 import Uptime from "./pages/tech/Status";
 import Linux from "./pages/tech/Linux";
 
@@ -39,10 +44,15 @@ function App() {
 
 				<Route path="/me/about" element={<About/>}/>
 				<Route path="/me/carry" element={<Carry/>}/>
+				<Route path="/me/contact" element={<Contact/>}/>
 				<Route path="/me/now" element={<Now/>}/>
 				<Route path="/me/soapbox" element={<Soapbox/>}/>
 				<Route path="/me/ideas" element={<Ideas/>}/>
 
+
+				<Route path="/tech/ai" element={<Ai/>}/>
+				<Route path="/tech/colophon" element={<Colophon/>}/>
+				<Route path="/tech/defaults" element={<Defaults/>}/>
 				<Route path="/tech/status" element={<Uptime/>}/>
 				<Route path="/tech/linux" element={<Linux/>}/>
 
@@ -53,6 +63,7 @@ function App() {
 				<Route path="/blank" element={<Blank/>}/>
 				<Route path="/sitemap" element={<Sitemap/>}/>
 				<Route path="/images" element={<Images/>}/>
+				<Route path="/links" element={<Links/>}/>
 
       </Routes>
 			<footer>

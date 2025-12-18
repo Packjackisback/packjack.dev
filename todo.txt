@@ -1,10 +1,10 @@
 me/
 	about : put a photo or something
 	carry : daily carryon
-	contact : add email, discord, github, slack
-	ideas : done
-	now : need content
-	soapbox : need content
+	about : add email, discord, github, slack
+	ideas : DONE
+	now : DONE
+	soapbox : DONE
 
 tech/
 	ai : views on ai
@@ -14,10 +14,10 @@ tech/
 	linux : need to add photos of rice
 
 world/
-	clouds : needs content
-	music : needs content, add to routes
+	clouds : DONE
+	music : DONE
 
 blank : DONE
-images : needs content
+images : DONE
 links : links to cool things I like
 sitemap : DONE
