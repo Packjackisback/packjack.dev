@@ -1,6 +1,4 @@
 import '../../css/main.css';
-import Age from "../../templates/CurrentAge";
-import RotatingText from "../../templates/RotatingText";
 import PrimaryContainer from "../../templates/PrimaryContainer";
 
 
